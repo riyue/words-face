@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>王宝强贱表情图片生成</title>
+<link rel="stylesheet" href="gen.css" />
+<style type="text/css">
+form input{margin-bottom: 20px;}
+</style>
+<script type="text/javascript" src="gen.js"></script>
+<script type="text/javascript">
+function getId(x){
+	return document.getElementById(x);
+}
+
+
+window.onload = function () {
+	var canvas = getId('jianwbq').getContext("2d");
+	var img = getId('img1');
+	canvas.drawImage(img,0,0);
+	
+	
+	function drawText (val) {
+		var text = getId('text' + val).value;
+		canvas.font         = '20px 微软雅黑';
+		canvas.textBaseline = 'top';
+		canvas.fillStyle    = '#fff';
+		var textWidth = canvas.measureText(text).width;
+		var x = 178 - (textWidth/2);  
+		canvas.fillText  ( text, x, 169 + 200*(val-1) );
+		
+		
+	}
+	
+	
+	getId('isok').onclick = function () {
+		drawText(1);
+		drawText(2);
+		drawText(3);
+	};
+	
+};
+
+
+
+
+
+</script> 
+</head>
+<body>
+
+<div style="position: absolute; top: 50px; left: 50px;">
+<img class="c-hide" id="img1" src="wbq.png"/>
+
+<canvas id="jianwbq" width="356" height="600">
+ Your browser does not support HTML 5 Canvas. 
+</canvas>
+
+<form class="c-frt c-ml20">
+ 
+	输入第一句话 <input id="text1" placeholder="输入第一句话" />
+  <br/>
+    输入第二句话 <input id="text2" placeholder="输入第二句话" />
+  <br/>
+    输入第三句话 <input id="text3" placeholder="输入第三句话" />
+  <br/>
+	<input type="button" value="点击生成" id="isok"/>   完了后，右键图片保存
+  <br/>
+	
+ 
+</form>
+  
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+

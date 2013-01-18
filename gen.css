@@ -1,0 +1,28 @@
+
+/*原子类css，语法级别的*/
+/*style*/
+.c-tc{text-align: center;}
+.c-tn{text-decoration: none;}
+
+.c-hide{display: none;}
+
+.c-flt{float: left;}
+.c-frt{float: right;}
+
+
+/*常用类css，常用的语法级属性*/
+.c-mt10{margin-top: 10px;}
+.c-mt5{margin-top: 5px;}
+
+.c-mr10{margin-right: 10px;}
+.c-mr20{margin-right: 20px;}
+
+.c-ml10{margin-left: 10px;}
+.c-ml20{margin-left: 20px;}
+
+
+
+.c-c000:{color: #000;}
+.c-cfff:{color: #fff;}
+
+
